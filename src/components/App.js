@@ -13,17 +13,12 @@ class App extends Component {
   };
 
   addFish = fish => {
-    console.log('adding a fish!', fish);
-    // 1. Take a copy of existing state
     const fishes = { ...this.state.fishes };
-    // 2. Add a new fish
     fishes[`fish${Date.now()}`] = fish;
-    // 3. Set the new object fishes to state
     this.setState({ fishes });
   };
 
   loadSampleFishes = () => {
-    console.log('Loading sample fishes', sampleFishes);
     this.setState({
       fishes: sampleFishes,
     });
@@ -35,7 +30,6 @@ class App extends Component {
         <div className='menu'>
           <Header tagline='Fresh Seafood Market' />
           <ul className='fishes'>
-            {/* <Fish /> */}
             {Object.keys(this.state.fishes).map(key => (
               <Fish key={key} details={this.state.fishes[key]}>
                 {key}: {this.state.fishes[key].name}
