@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Order from './Order';
 import Inventory from './Inventory';
+import sampleFishes from '../sample-fishes';
 
 class App extends Component {
   state = {
@@ -18,11 +19,13 @@ class App extends Component {
     fishes[`fish${Date.now()}`] = fish;
     // 3. Set the new object fishes to state
     this.setState({ fishes });
+  };
 
-    // const newFishes = fishes.push(fish);
-    // this.setState(state => {
-    // fishes: state.fishes.push(fish);
-    // });
+  loadSampleFishes = () => {
+    console.log('Loading sample fishes', sampleFishes);
+    this.setState({
+      fishes: sampleFishes,
+    });
   };
 
   render() {
@@ -32,7 +35,10 @@ class App extends Component {
           <Header tagline='Fresh Seafood Market' />
         </div>
         <Order />
-        <Inventory addFish={this.addFish} />
+        <Inventory
+          addFish={this.addFish}
+          loadSampleFishes={this.loadSampleFishes}
+        />
       </div>
     );
   }
