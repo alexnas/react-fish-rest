@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Header from './Header';
 import Order from './Order';
@@ -11,6 +12,10 @@ class App extends Component {
   state = {
     fishes: {},
     order: {},
+  };
+
+  static propTypes = {
+    match: PropTypes.object,
   };
 
   componentDidMount() {

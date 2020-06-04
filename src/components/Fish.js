@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { formatPrice } from '../helpers';
 
 class Fish extends Component {
-  state = {};
+  static propTypes = {
+    details: PropTypes.shape({
+      name: PropTypes.string,
+      price: PropTypes.number,
+      status: PropTypes.string,
+      desc: PropTypes.string,
+      image: PropTypes.string,
+    }),
+    addToOrder: PropTypes.func,
+  };
 
   render() {
     const { name, price, status, desc, image } = this.props.details;
