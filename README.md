@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # React Fish Rest
 
-React Online Restorant Menu with order cart and menu managing (CRUD).
+React Online Restaurant Menu with order cart and menu managing (CRUD).
 
 ## Options
 
