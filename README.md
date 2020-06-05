@@ -7,13 +7,16 @@ React Online Restaurant Menu with order cart and menu managing (CRUD).
 ## Options
 
 - full menu managing - CRUD (create, get, update, delete menu items)
-- fetch data from mock file
 - order cart with summary, editing and cleaning
+- store management authentication through socials
+- animation of the order cart operations
+- fetch sample data from mock file
 
 ## Uses
 
 - React 16.13
 - React Router
+- React-Transition-Group for animation
 - PropTypes
 - Firebase
 - Mock data
